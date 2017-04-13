@@ -1,0 +1,287 @@
+nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+    background: url('../img/background-header.jpg') ;
+    /*background: #ef1110;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+    padding-top: 10px;
+}
+
+#responsivo{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
+    img.panelas-right {
+        margin-top: 176%;
+    }
+    img.panelas-left {
+        margin-top: 180%;
+    }
+
+    img.img-kit {
+        margin-left: 50%;
+    }
+
+    .btn-vermelho {
+        font-size: 30px;
+    }
+
+    img.donatela-left {
+        margin-left: 90px;
+        max-height: 250px;
+    }
+    .quadrado {
+        height: 221px;
+        width: 235px;
+    }
+    .login-texto {
+        padding-top: 3%;
+        margin-left: 50px;
+    }
+    .panela-passo-4 {
+        margin: -35px -47px 0 0;
+    }
+    .kits-passo-4 {
+        margin: -35px 0px 0px -49px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #responsivo{
+        display: block;
+    }
+    .panela-home, .detalhes-panela .linha{
+        display: none;
+    }
+
+    .btn-vermelho {
+        font-size: 26px;
+    }   
+
+    .passo-4 {
+        height: auto;
+    }
+    .linha-baixo strong, .linha-cima strong {
+        float: left;
+        display: list-item;
+        margin: 0;
+    }
+
+    .detalhes-panela .col-md-4 img{
+        float: right;
+        max-height: 165px;
+        margin-top: -90px;
+    }
+    .detalhes-panela .linha-cima strong{
+        display: block !important
+    }
+
+    .detalhes-panela .linha-cima, .detalhes-panela .linha-baixo {
+        margin-top: 20px;
+        display: list-item;
+        list-style: none;
+    }
+
+    .detalhes-panela .quadrado strong {
+        font-size: 16px;
+    }
+
+    .detalhes-panela .quadrado img.detalhes-premio {
+        margin: -78px 0 auto;
+    }
+
+    .panela-passo-4 {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .kits-passo-4{
+        float: none;
+        display: block;
+        margin: 0 auto;
+        min-width: 205px;
+    }
+    .texto-passo-a-passo-4 {
+        float: none;
+    }
+    img.donatela-left {
+        margin-left: 37px;
+        z-index: 2;
+        position: absolute;
+        margin-top: -44px;
+    }
+
+    .login-texto {
+        text-align: center;
+    }
+
+    .quadrado img {
+        margin: 7% auto;
+    }
+    .login-texto {
+        margin-left: 0; 
+    }
+
+    img.donatela-contato {
+        margin-top: 0 !important;
+        position: relative;
+        min-height: 350px;
+        margin: 0 auto;
+    }
+    .contatos {
+        margin: 0;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .mapa-contato {
+        margin-top: 0; 
+        margin-bottom: 20; 
+    }
+    .contatos strong, .contatos a {
+        font-size: 15px;
+    }
+    .icone-galeria img {
+        text-align: center;
+        margin: 0 auto;
+    }
+    img.alfinete-right {
+        margin-right: 225px;
+    }
+    img.alfinete-left {
+        margin-left: 217px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .btn-vermelho {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 790px){
+
+    .btn-vermelho {
+        font-size: 22px;        
+        padding: 5px 15px;
+    }
+
+    img.donatela-left {
+        margin-left: 43px;
+        z-index: 2;
+        position: absolute;
+        margin-top: -20px;
+        max-height: 265px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    footer .collapse {
+        display: inline-block; 
+    }
+    footer {
+        height: auto;
+        margin-top: 0;
+    }
+    footer img.termos-caixa{
+        float: right;
+        margin-top: -153px;
+    }
+    .nav>li>a, .nav>li>a {
+        font-size: 14px 
+    }
+    nav.affix {
+        background: url(../img/back.png);
+    }
+    
+    img.alfinete-right {
+        margin-right: 225px;
+    }
+    img.alfinete-left {
+        margin-left: 195px;
+    }
+}
+@media only screen and (max-width: 678px){
+    img.donatela-left {
+        margin-left: 15px;
+    }
+    .quadrado {
+        height: 190px;
+        width: 200px;
+    }
+    .quadrado img {
+        max-height: 125px;
+        margin-top: 18px;
+    }
+    .detalhes-panela .col-md-4 img {
+        float: right;
+        max-height: 165px;
+        margin-top: -226px;
+        margin-bottom: 120px;
+    }
+    img.alfinete-right {
+        margin-right: 192px;
+    }
+    img.alfinete-left {
+        margin-left: 174px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    img.donatela-left {
+        margin-left: 0;
+        margin-top: -10px;
+        max-height: 220px;
+    }
+    .container hr {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 550px){
+    img.donatela-left {
+        display: none;
+    }
+
+    .detalhes-panela .col-md-4 img {
+        float: right;
+        max-height: 165px;
+        margin-top: -110px;
+        margin-bottom: 10px;
+    }
+
+    footer img.termos-caixa {
+        float: none;
+        margin-top: 0px;
+        margin: 0 auto;
+    }
+
+    .ingrediente span{
+        font-size: 33px;
+    }
+
+    .premios-topo h2{
+        font-size: 23px;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .nav>li>a:focus, .nav>li>a:hover {
+        text-decoration: none;
+        background-color: transparent;
+    }
+    .btn-enviar-pequeno, .btn-vermelho-pequeno {
+        font-size: 15px !important;
+    }
+    .btn-enviar-pequeno {
+        font-size: 15px !important;
+    }
+    .btn-enviar {
+        font-size: 20px;
+    }
+    img.alfinete-right {
+        margin-right: 92px;
+    }
+    img.alfinete-left {
+        margin-left: 74px;
+    }
+}

@@ -1,0 +1,654 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/10/2016, 20:04:51
+    Author     : Dionata Nunes
+*/
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+@font-face {font-family: "MuseoSansCyrlW03-900";
+            src: url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.eot");
+            src: url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.eot?#iefix") format("embedded-opentype"),
+                url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.woff2") format("woff2"),
+                url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.woff") format("woff"),
+                url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.ttf") format("truetype"),
+                url("../fonts/Museo Sans Cyrl W03 900/2f1f3feea7d6b09afda02d8a4b54dea1.svg#MuseoSansCyrlW03-900") format("svg");
+
+}
+@font-face {font-family: "MuseoSansCyrlW03-500";
+            src: url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4.eot");
+            src: url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4?#iefix") format("embedded-opentype"),
+                url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4.woff2") format("woff2"),
+                url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4.woff") format("woff"),
+                url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4.ttf") format("truetype"),
+                url("../fonts/Museo Sans Cyrl W03 500/fb1bea81a02964993fa20fa8c7c13ea4.svg#MuseoSansCyrlW03-500") format("svg");
+}
+
+@font-face {
+    font-family: "Kathya";
+    /*src: url('../fonts/Kathya Script.woff'); URL to font*/
+    /*src: url('../fonts/Kathya Script.eot'); URL to font*/
+    src: url('../fonts/Kathya Script.otf'); /*URL to font*/
+    src: url('../fonts/Kathya Script.svg'); /*URL to font*/
+    src: url('../fonts/Kathya Script.ttf'); /*URL to font*/
+}
+
+body {
+    background: url('../img/background.png') no-repeat center 0;
+    /*background: #ef1110;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#fff;
+    font-family: "MuseoSansCyrlW03-900", "Arial", Gadget, sans-serif;
+}
+
+*:hover{
+    -webkit-transition-duration: 0.9s;
+    -moz-transition-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+    transition-duration: 0.9s;
+}
+span, p {
+    font-family: "MuseoSansCyrlW03-500", "Arial", Gadget, sans-serif;
+}
+span{
+    font-size: 16px;
+}
+
+.some{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+header{
+    background: url('../img/background-header.jpg') ;
+    /*background: #ef1110;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#fff;    
+    font-weight: bold;
+}
+header .navbar-default {
+    background-color: transparent; 
+    border-color: transparent !important;
+}
+
+.background-menu{
+    background: url('../img/background-header.jpg') ;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #286090; 
+    color: #fff
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fdf3f3;
+    background-color: transparent;
+    text-shadow: 0px -3px 9px rgb(245, 174, 6);
+}
+
+nav>li>a.imagem-caixa:focus, .nav>li>a.imagem-caixa:hover{
+    background-color: transparent !important;    
+}
+
+img.termos-caixa{
+    margin-top: -90px;
+    max-height: 100px;
+    -webkit-box-shadow: -7px -6px 6px -2px rgba(0,0,0,0.42);
+    -moz-box-shadow: -7px -6px 6px -2px 0px rgba(0,0,0,0.42);
+    box-shadow: -7px -6px 6px -2px rgba(0,0,0,0.42);
+}
+
+#navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+#name-xs{
+    display: none;
+}
+
+.navbar-nav {
+    display: table;
+    float: none;
+    margin: 0 auto;
+    table-layout: fixed;
+    font-size: 1.25em;
+}
+
+@media only screen and (max-width: 870px) {
+
+    .navbar-nav {
+        font-size: 1.0em;
+    }
+}
+
+@media only screen and (max-width: 790px){
+
+    .navbar-nav {
+        font-size: 0.9em;
+    }
+}
+@media only screen and (max-width: 767px){
+    #name-xs{
+        display: block;
+    }
+    #name-lg{
+        display: none;
+    }
+    .navbar-nav {
+        display: block;
+        font-size: 1.25em;
+    }
+    .nome-logo img {
+        max-height: 27px;
+        margin: 10px 25px !important;
+    }
+    header{
+        background: url('../img/back.png');
+    }
+}
+
+/* $('#name-xs').show();
+$('#name-lg').hide();*/
+.navbar-nav ul li a{
+    font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.top-navbar{
+    height: 60px;
+}
+
+/*
+*content
+*/
+.content{
+    min-height: 900px;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -30px;
+    /* Pad the bottom by footer height */
+    padding: 0 0 30px;
+}
+
+
+/*
+*footer
+*/
+footer{
+    background: #152f9e;
+    height: 50px;
+    margin-top: 70px;
+}
+
+.img.volt_hoz{
+    -moz-transform:rotate(180deg);
+}
+img.volt_ver {
+    -webkit-transform:rotate(180deg);
+}
+
+
+/*
+*conteudo
+*/
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.no-padding-left {
+    padding-left: 0 !important;
+}
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.presentear-1{
+    font-size: 24px;
+}
+.presentear-2{
+    font-size: 18px;
+}
+
+img.panelas-right{
+    margin-top: 154%;
+    margin-left: -76%;
+    position: relative;
+    z-index: 2;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #3F51B5;
+}
+.nav>li>a, .nav>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+img.panelas-left{    
+    margin-left: 81%;
+    margin-top: 154%;
+    z-index: 2;
+}
+img.donatela-home{
+    margin-top: 83%;
+    margin-left: -41%;
+    z-index: 1;
+    position: absolute;
+}
+img.img-kit{
+    margin-top: 40%;
+    margin-left: 67%;
+    z-index: 4;
+    position: absolute;
+}
+.btn-vermelho{
+    font-size: 36px;
+    margin-top: 25px;
+    background: #f40000;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    height: auto;
+    color: #fff !important;
+    -webkit-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    -moz-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    box-shadow: inset -4px -3px 6px 4px rgba(0,0,0,0.3);
+}
+
+.btn-vermelho-pequeno{
+    font-size: 26px;
+}
+.btn-vermelho:hover, .btn-vermelho:focus, .btn-vermelho:after, .btn-vermelho:active{
+    -webkit-box-shadow: inset 0px -1px 9px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -1px 9px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -1px 9px 3px rgba(0,0,0,0.5);
+    cursor: default;
+    text-shadow: 0px -3px 9px rgb(245, 174, 6);
+}
+.btn-login{
+    background: #152f9f;
+    color: #fff;
+    margin: 20px 0 auto;
+    border-radius: 30px;
+    padding: 5px 20px;
+    -webkit-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    -moz-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    box-shadow: inset -4px -3px 6px 4px rgba(0,0,0,0.3);
+}
+.btn-login:hover{
+    background: #152fa0;
+    color:#fff;
+    -webkit-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    -moz-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    box-shadow: inset -4px -3px 6px 4px rgba(0,0,0,0.3);
+}
+.passo-numero{
+    font-size: 70px;
+    font-weight: 900;
+
+}
+
+.panela-passo-4 {
+    max-width: 233px;
+    float: right;
+    margin: -35px -38px 0 0;
+}
+
+.kits-passo-4{
+    min-width: 290px;
+    margin: -35px 0 0px -30px;
+}
+.circulo{
+    height: 200px;
+    width: 200px;
+    background: #f90000;
+    border-radius: 50%;
+    border: #fff 10px solid;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-shadow: -7px -2px 30px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: -7px -2px 30px 2px rgba(0,0,0,0.5);
+    box-shadow: -7px -2px 30px 2px  rgba(0,0,0,0.5);
+}
+.circulo:hover{    
+    background: rgba(243, 10, 10, 0.8);;
+}
+.quadrado{
+    height: 230px;
+    width: 250px;
+    background: #f90000;
+    border-radius: 20%;
+    border: #fff 10px solid;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-shadow: -8px 4px 30px -2px rgba(0,0,0,0.5);
+    -moz-box-shadow: -8px 4px 30px -2px rgba(0,0,0,0.5);
+    box-shadow: -8px 4px 30px -2px rgba(0,0,0,0.5);
+}
+.quadrado:hover{    
+    background: rgba(243, 10, 10, 0.8);;
+}
+.login-facebook{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.login-texto{
+    padding-top: 5%;
+}
+.login-texto strong{
+    font-size: 19px;
+}
+
+img.donatela-left{
+    margin-left: 125px;
+    z-index: 2;
+    position: relative;
+}
+
+.circulo img, .quadrado img{
+    text-align: center;
+    vertical-align: middle;
+    margin: 12% auto;
+    position: relative;    
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.container hr {
+    border-top: 4px solid #fff !important;
+    width: 60%;
+    display: block;
+    border-radius: 8px;
+}
+
+img.donatela-home{
+    -vendor-animation-duration: 1s;
+    -vendor-animation-delay: 2s;
+    -vendor-animation-iteration-count: infinite;
+}
+
+.nome-logo img{    
+    max-height: 27px;
+    margin-top: -10px;
+}
+
+.nome-logo img:hover{    
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.texto-passo-a-passo strong{
+    font-size: 21px;
+}
+.passo-2{
+    margin-left: 34px;
+}
+.texto-passo-a-passo-4 {
+
+    float: left
+}
+.texto-passo-a-passo-4 strong{
+    font-size: 30px;
+}
+.texto-passo-a-passo-4 span{
+    font-size: 19px;
+}
+
+/*
+*Formulario
+*/
+.table-form{
+    padding-top: 40px;
+}
+.table-form div{
+    border: #fff solid 2px;
+    min-height: 40px;
+    background: #f31e0e;
+}
+.table-form div input{
+    background: transparent;
+    border: none;
+    color: #fff;
+    height: auto;
+    font-weight: normal;
+}
+.table-form div label{
+    font-size: 16px
+}
+
+.btn-enviar{
+    height: auto;
+    border: none;
+    background: #1835b1;
+    color: #fff;
+    margin: 20px 0 auto;
+    border-radius: 30px;
+    padding: 5px 27px;
+    font-size: 30px;
+    -webkit-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    -moz-box-shadow: inset -4px -3px 6px 4px  rgba(0,0,0,0.3);
+    box-shadow: inset -4px -3px 6px 4px rgba(0,0,0,0.3);
+}
+.btn-enviar-pequeno{
+    font-size: 20px !important;
+}
+
+.btn-enviar:hover, .btn-enviar:active, .btn-enviar:after, .btn-enviar:focus{
+    border: none;
+    color: #fff;
+    background: #152fa0;
+    -webkit-box-shadow: inset 4px 3px 6px 4px  rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 4px 3px 6px 4px  rgba(0,0,0,0.3);
+    box-shadow: inset 4px 3px 6px 4px rgba(0,0,0,0.3);
+}
+.confirmar-facebook{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.termos-de-uso{
+    background: #fff;
+    min-height: 500px;
+    margin-top: 40px;
+    border-radius: 50px;   
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.termos-de-uso .conteudo{
+    margin-top: 20px;
+}
+
+.termos-de-uso .title strong, .termos-de-uso .conteudo p{
+    color:#000;
+    display: block;
+    padding: 0 20px;
+}
+
+.termos-de-uso .conteudo p{    
+    font-size: 12px;
+}
+
+.premios-topo{
+    margin-top: 20px;
+}
+.premios-topo strong{
+    letter-spacing:1px;
+    font-size: 16px;
+}
+img.premios-center{
+    margin: 0 auto;
+    max-height: 158px;
+}
+
+.ingrediente span{
+    font-family: "Kathya";
+    font-size: 50px;
+}
+
+.detalhes-panela{
+    padding-top: 50px;
+}
+.detalhes-panela .quadrado{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.detalhes-panela .quadrado:hover{
+    background: rgb(215, 11, 7);
+}
+
+.detalhes-panela .quadrado img.detalhes-premio{
+    margin: -105px 0 auto;
+}
+
+.detalhes-panela .quadrado .texto-centro{
+    margin-top: -2px;
+}
+
+.detalhes-panela .quadrado strong{
+    display: block;
+}
+.detalhes-panela .linha{
+    border-top: 3px solid #fff;
+    display: inline-block;
+}
+.detalhes-panela .linha-cima{
+    margin-top: -204px;
+    z-index: -1;
+    position: relative;
+}
+.detalhes-panela .linha-baixo{
+    margin-top: 170px;
+    z-index: -1;
+    position: relative;
+}
+
+.linha-baixo strong, .linha-cima strong{
+    margin-top: -15px;
+    font-size: 17px;
+}
+
+/*
+* GALERIA
+*/
+.icone-galeria img{
+    text-align: right;
+    margin-top: 80px;
+}
+.donatela-galeria img{
+    text-align: right;
+    margin-top: 20px;
+    position: relative;
+    z-index: -1;
+    margin-left: -115px;
+}
+.donatela-galeria .btn{
+    margin-top: 130px;
+}
+
+.pagination>li>a, .pagination>li>span { 
+    border-radius: 50% !important;
+    margin: 40px 5px;
+    background: #1835b1;
+    color: #fff;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background: #3052e0;
+}
+
+.img-gallery{
+    background: url(../img/fundo-galeria.png) 100% 25px no-repeat;
+    max-height: 460px;
+    height: 460px;
+}
+
+.girar-imagem-right{
+    -ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+}
+
+.girar-imagem-left{
+    -ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+}
+
+.fundo-galeria img{
+    margin: 0 auto;
+    border: solid 20px #fff;
+    border-bottom: solid 50px #fff;    
+    margin-top: 50px;
+    -webkit-box-shadow: -2px 1px 96px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: -2px 1px 96px 0px rgba(0,0,0,0.54);
+    box-shadow: -2px 1px 96px 0px rgba(0,0,0,0.54);
+}
+
+a.link {
+    color: #fff; 
+    font-size: 20px;
+}
+
+strong.contato{
+    font-size: 20px;    
+    line-height: 24px;
+}
+img.donatela-contato{
+    margin-top: 250px !important;
+    position: relative;
+    min-height: 350px;
+}
+
+.mapa-contato{
+    margin-top: -100px;
+}
+.mapa-contato iframe{
+    -webkit-box-shadow: 2px 14px 92px -14px rgba(26,25,26,0.68);
+    -moz-box-shadow: 2px 14px 92px -14px rgba(26,25,26,0.68);
+    box-shadow: 2px 14px 92px -14px rgba(26,25,26,0.68);
+}
+.contatos{
+    margin-top: -100px;
+}
+.contatos strong, .contatos a{
+    margin-top: 30px;
+    font-size: 22px;
+    display: block;
+}
+
+
+img.alfinete-left{
+    background: transparent;
+    border: 0;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 45px;
+}
+img.alfinete-right{
+    background: transparent;
+    border: 0;
+    position: absolute;
+    margin-top: -5px;
+    right: 0;
+    margin-right: 60px;
+}
